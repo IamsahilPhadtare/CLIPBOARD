@@ -1,0 +1,28 @@
+var scrollbutton = document.getElementById("scrollBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollbutton.style.display = "block";
+  } else {
+    scrollbutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+.gotopbtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #1a88d1;
+    bottom: 20px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 55px;
+    font-size: 40;
+
+}
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
