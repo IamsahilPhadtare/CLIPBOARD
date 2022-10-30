@@ -39,7 +39,19 @@ form.textBox{
   -moz-box-sizing: border-box;
    box-sizing: border-box;
   width : 70%;
-  border-radius: 0px 10px 10px 10px;
+  border-radius: 10px;
+  padding: 20px;
+  caret-color: blue;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  resize: vertical;
+  /* overflow: scroll; */
+}
+
+.text-area:focus {
+  outline: none;
+  border: 2px solid rgb(83, 138, 255);
 }
 
 .submit {
@@ -47,14 +59,20 @@ form.textBox{
   position: relative;
   align-items:center;
   width: 30%;
-  height: 30px;
+  /* height: 30px; */
+  padding: 10px;
   max-width:100px;
   background-color: var(--quaternary-color);
-  color: black;
+  color: #fff;
   font-size: 17px;
   border-radius: 5px;
+  cursor: pointer;
 }
-
+.submit:hover{
+  background-color: white;
+  color: black;
+  transition: .3s;
+}
 ::placeholder {
    text-align: center; 
 }
@@ -82,14 +100,26 @@ form.textBox{
 
 .show {
   background-color: var(--quaternary-color);
-  color: black;
-  font-size: 17px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
+}
 
+.show:hover{
+  background-color: white;
+  color: black;
+  transition: .3s;
 }
 
 .dropdown {
   background-color: var(--tertiary-color);
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 5px;
 }
 
 .clip {
@@ -100,6 +130,21 @@ form.textBox{
   min-height: 5ch;
 }
 
+
+.created{
+  background-color: rgb(208, 247, 247);
+  padding: 10px;
+}
+
+.clips{
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+}
+.clip button {
+  float: right;
+
+}
 
 /*text related styles*/
 #mainHeading{
@@ -129,7 +174,7 @@ p {
   left: 8px;
   width: 97%;
   word-wrap: break-word;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 
@@ -156,7 +201,7 @@ p {
   transition: 0.3s ease-in-out;
 }
 
-#switch-1 {
+#default {
    background: linear-gradient(
     to right,
     #f3a6af 0%,
@@ -164,11 +209,45 @@ p {
   );
 }
 
-#switch-2 {
+#dark {
    background: linear-gradient(
     to right,
     #14172c 0%,
     #c08058 100%
   );
 }
+
+#deepblue {
+   background: linear-gradient(
+    to right,
+    #192a56 0%,
+    #273c75 100%
+  );
+}
+
+#mint {
+   background: linear-gradient(
+    to right,
+    #10ac84 0%,
+    #1dd1a1 100%
+  );
+}
+
+#owlpurple {
+   background: linear-gradient(
+    to right,
+    #341f97 0%,
+    #5f27cd 100%
+  );
+}
+
+#lemon {
+   background: linear-gradient(
+    to right,
+    #ffc048 0%,
+    #ffdd59 100%
+  );
+}
+
+
 
